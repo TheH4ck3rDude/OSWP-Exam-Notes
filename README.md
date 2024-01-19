@@ -1,6 +1,7 @@
 OSWP Exam Review Notes and Commands
 
 Welcome to the GitHub repository for the OSWP (Offensive Security Wireless Professional) Exam Review. This repository is dedicated to providing comprehensive notes and practical commands for individuals preparing for the OSWP certification, focusing on techniques and methodologies for connecting to and attacking various wireless network types including OPEN, WEP, WPA/WPA2, and WPA2-Enterprise Networks.
+
 Table of Contents
 
     Introduction
@@ -75,9 +76,13 @@ Commands and Techniques
 Useful Resources
 
     [Offensive Security's Official OSWP Guide](https://help.offsec.com/hc/en-us/articles/360046904731-OSWP-Exam-Guide)
+    
     [WiFi Challenge Labs](https://wifichallengelab.com/)
+    
     [Attacking the WEP Protocol](https://medium.com/@navkang/attacking-the-wep-protocol-62c5c31c2687)
+    
     [Attacking the WPA/WPA2 Protocol](https://medium.com/@navkang/crack-the-wpa-handshake-get-the-psk-b4604d3ed330)
+    
     [Attacking WPA2-Enterprise](https://medium.com/@navkang/crack-the-wpa-handshake-get-the-psk-b4604d3ed330)
 
 Contributing
