@@ -1,0 +1,33 @@
+- Create configuration file
+    - nano <filename>.conf
+        - nano open.conf
+        
+          network={
+           ssid="hotel_wifi"
+           scan_ssid=1
+          }
+          
+          OR
+          
+          network={
+           ssid="hotel_wifi"
+           key_mgmt=NONE
+           priority=100
+          }
+          
+          OR
+          
+          network={
+           ssid="hotel_wifi"
+           key_mgmt=NONE
+           priority=100
+           bssid=<MAC Address>
+          }
+        
+- Connect to open network using config file
+    - wpa_supplicant -i <interface> -c <config-file>
+    - wpa_supplicant -i wlan0 -c open.conf
+    
+- Obtain IP Address
+    - dhclient -v <interface>
+    - dhclient -v wlan0
