@@ -1,0 +1,28 @@
+- Create configuration file
+    - nano <filename>.conf
+        - nano wpa2-psk.conf
+        
+        network={
+         ssid="hotel_wifi"
+         key_mgmt=WPA-PSK
+         psk="hotel_password"
+         priority=100
+        }
+        
+        OR
+        
+        network={
+         ssid="hotel_wifi"
+         key_mgmt=WPA-PSK
+         psk="hotel_password"
+         priority=100
+         bssid=<MAC Address>
+        }
+
+- Connect to open network using config file
+    - wpa_supplicant -i <interface> -c <config-file>
+    - wpa_supplicant -i wlan0 -c wpa2-psk.conf
+    
+- Obtain IP Address
+    - dhclient -v <interface>
+    - dhclient -v wlan0
