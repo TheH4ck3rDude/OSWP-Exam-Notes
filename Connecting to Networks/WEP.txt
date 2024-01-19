@@ -1,0 +1,19 @@
+- Create configuration file
+    - nano <filename>.conf
+        - nano WEP.conf
+       
+          network={
+           ssid="hotel_wifi"
+           key_mgmt=NONE
+           wep_key0=KEY_Withot_Colons
+           wep_tx_keyidx=0
+          }
+
+- Connect to open network using config file
+    - wpa_supplicant -i <interface> -c <config-file>
+    - wpa_supplicant -i wlan0 -c wep.conf
+    - wpa_supplicant -D nl80211 -i wlan2 -c wep.conf
+    
+- Obtain IP Address
+    - dhclient -v <interface>
+    - dhclient -v wlan0
