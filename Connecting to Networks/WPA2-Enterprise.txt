@@ -1,0 +1,22 @@
+- Create configuration file
+    - nano <filename>.conf
+        - nano wpa2-mgmt.conf
+          
+          network={
+            ssid="NetworkName"
+            scan_ssid=1
+            key_mgmt=WPA-EAP
+            identity="Domain\username"
+            password="password"
+            eap=PEAP
+            phase1="peaplabel=0"
+            phase2="auth=MSCHAPV2"
+          }
+
+- Connect to open network using config file
+    - wpa_supplicant -i <interface> -c <config-file>
+    - wpa_supplicant -i wlan0 -c wpa2-mgmt.conf
+    
+- Obtain IP Address
+    - dhclient -v <interface>
+    - dhclient -v wlan0
